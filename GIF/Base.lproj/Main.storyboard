@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GIF" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9w-yH-ytw">
+                                <rect key="frame" x="51" y="108" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.4870900937" green="0.9225480814" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="xEJ-Ad-OGw"/>
+                                </constraints>
+                                <state key="normal" title="分解"/>
+                                <connections>
+                                    <action selector="decode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgF-Ei-rNi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92E-mY-Fz9">
+                                <rect key="frame" x="147.5" y="108" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.4870900937" green="0.9225480814" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="3zS-DW-SPa"/>
+                                </constraints>
+                                <state key="normal" title="合成"/>
+                                <connections>
+                                    <action selector="encode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ln-UQ-D6g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWS-zD-0BO">
+                                <rect key="frame" x="174.5" y="49" width="26" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEO-72-J1E" customClass="GifView" customModule="GIF" customModuleProvider="target">
+                                <rect key="frame" x="67" y="259" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV5-j4-VVv">
+                                <rect key="frame" x="246" y="108" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.4870900937" green="0.9225480814" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="C7U-xd-FcS"/>
+                                </constraints>
+                                <state key="normal" title="展示"/>
+                                <connections>
+                                    <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14J-J8-C3W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="92E-mY-Fz9" firstAttribute="centerY" secondItem="JV5-j4-VVv" secondAttribute="centerY" id="5mo-8y-rhN"/>
+                            <constraint firstItem="M9w-yH-ytw" firstAttribute="centerY" secondItem="92E-mY-Fz9" secondAttribute="centerY" id="8IH-E0-Ppu"/>
+                            <constraint firstAttribute="trailing" secondItem="JV5-j4-VVv" secondAttribute="trailing" constant="49" id="NtK-2I-zcS"/>
+                            <constraint firstItem="92E-mY-Fz9" firstAttribute="top" secondItem="gWS-zD-0BO" secondAttribute="bottom" constant="38" id="Ube-TQ-MLr"/>
+                            <constraint firstItem="gWS-zD-0BO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="htj-on-Lb3"/>
+                            <constraint firstItem="M9w-yH-ytw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="smw-mv-RnT"/>
+                            <constraint firstItem="92E-mY-Fz9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tdt-3k-8IK"/>
+                            <constraint firstItem="gWS-zD-0BO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wwt-a3-8Sn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gifView" destination="qEO-72-J1E" id="abp-mO-QEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="66.11694152923539"/>
+        </scene>
+    </scenes>
+</document>
